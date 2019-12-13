@@ -2,19 +2,8 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      parallel {
-        stage('Build') {
-          steps {
-            echo 'Started'
-          }
-        }
-
-        stage('Create job') {
-          steps {
-            build(job: 'Example', quietPeriod: 2, wait: true)
-          }
-        }
-
+      steps {
+        echo 'Started'
       }
     }
 
