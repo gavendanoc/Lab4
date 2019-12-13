@@ -47,9 +47,12 @@ pipeline {
           }
         }
 
-        stage('Chrome') {
+        stage('Retry body') {
           steps {
-            error 'No signal'
+            retry(count: 4) {
+              echo 'Retry 4 times the body sucessful'
+            }
+
           }
         }
 
