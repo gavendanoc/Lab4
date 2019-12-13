@@ -32,7 +32,7 @@ pipeline {
           }
         }
 
-        stage('an·lisis de datos') {
+        stage('an√°lisis de datos') {
           steps {
             echo 'analizar datos de los sensores'
           }
@@ -41,7 +41,7 @@ pipeline {
       }
     }
 
-    stage('Bus') {
+    stage('Transporte') {
       steps {
         echo 'Bus sensores'
         echo 'Bus actuador'
