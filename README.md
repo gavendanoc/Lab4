@@ -8,9 +8,9 @@
  
  
  ## Integrantes: 
- . Gabriel Andres Avendaño
- . Valentina Bernal Buitrago
- . Daniela Duque Garcia
+ - Gabriel Andres Avendaño
+ - Valentina Bernal Buitrago
+ - Daniela Duque Garcia
  
  
  
