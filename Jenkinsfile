@@ -1,78 +1,73 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('fabrica') {
       parallel {
-        stage('Build') {
+        stage('Sensores') {
           steps {
-            echo 'Started'
+            echo 'sensor motor'
           }
         }
 
-        stage('hola') {
+        stage('actuador') {
           steps {
-            echo 'hola'
+            echo 'servo motor'
           }
         }
 
       }
     }
 
-    stage('Test') {
+    stage('planta') {
       parallel {
-        stage('Test') {
+        stage('Test sensores') {
           steps {
-            echo 'Test completed'
+            echo 'sensor presion'
           }
         }
 
-        stage('Time Limit') {
+        stage('Test actuador') {
           steps {
-            timeout(time: 30) {
-              echo 'Time limit pass'
-            }
-
+            echo 'Test actuadores'
           }
         }
 
-        stage('Junit') {
+        stage('análisis de datos') {
           steps {
-            junit(allowEmptyResults: true, testResults: 'true')
-          }
-        }
-
-        stage('Archivo index') {
-          steps {
-            fileExists 'Index.html'
+            echo 'analizar datos de los sensores'
           }
         }
 
       }
     }
 
-    stage('Browser Test') {
-      parallel {
-        stage('Browser Test') {
-          steps {
-            echo 'Browser Test'
-          }
-        }
-
-        stage('Retry body') {
-          steps {
-            retry(count: 4) {
-              echo 'Retry 4 times the body sucessful'
-            }
-
-          }
-        }
-
-      }
-    }
-
-    stage('Production') {
+    stage('Bus') {
       steps {
-        echo 'Product ready'
+        echo 'Bus sensores'
+        echo 'Bus actuador'
+      }
+    }
+
+    stage('Almacenamiento') {
+      parallel {
+        stage('almacenamiento sensores') {
+          steps {
+            echo 'sensores '
+          }
+        }
+
+        stage('almacenamiento actuadores') {
+          steps {
+            echo 'actuadores'
+          }
+        }
+
+      }
+    }
+
+    stage('Distribuidor') {
+      steps {
+        echo 'vender'
       }
     }
 
