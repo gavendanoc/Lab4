@@ -1,9 +1,0 @@
-﻿Para las páginas que hacen scroll:
-los vínculos necesarios para ir a las diferentes secciones del documento se encuentran 
-disponible en la barra de navegacion como un sub menu de cada pagina, disponible y visible 
-al pasar el mouse sobre la opción (Nombre ) de la página necesaria esto con el fin de hacer
-un diseño diferente, de esta manera se implementa el numeral 5 de las especificaciones.
-
-Para los iframes y links de más información:
-Para poder acceder a los link y visualizar correctamente el contenido de los iframes es necesario
-tener acceso a Internet.
